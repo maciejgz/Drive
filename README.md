@@ -23,10 +23,27 @@ Głównym
 
 
 #### Planowanie architektury
+##### Diagram C4 systemu
+- TODO
+
 ##### Big picture event storming
 - https://miro.com/app/board/o9J_kw9maMs=/
 - /docs/event_storming/
 - podział na subdomeny
+- ograniczenie funkcjonalności 
+
+##### ADR
+- TODO
+
+###### Architektura systemowa
+- TODO
+
+###### Architektura aplikacji
+- TODO
+
+##### Metryki
+- TODO
+
 
 
 
