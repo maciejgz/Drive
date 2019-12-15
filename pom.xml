@@ -4,6 +4,9 @@
   <groupId>pl.mg</groupId>
   <artifactId>drive</artifactId>
   <version>0.1</version>
+  <modules>
+    <module>activemq-test</module>
+  </modules>
   <packaging>pom</packaging>
   <name>drive</name>
 </project>
