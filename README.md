@@ -34,7 +34,8 @@ Głównym
 - ograniczenie funkcjonalności 
 
 ##### ADR
-- TODO
+- https://medium.com/better-programming/here-is-a-simple-yet-powerful-tool-to-record-your-architectural-decisions-5fb31367a7da
+- w katalogu /docs/ADR/
 
 ###### Architektura systemowa
 - TODO
