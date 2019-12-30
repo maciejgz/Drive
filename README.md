@@ -27,11 +27,17 @@ Głównym
 ##### Diagram C4 systemu
 - TODO
 
+##### Metryki
+- TODO - techniczne i biznesowe
+
 ##### Big picture event storming
 - https://miro.com/app/board/o9J_kw9maMs=/
 - /docs/event_storming/
 - podział na subdomeny
 - ograniczenie funkcjonalności 
+
+#### Design Level Event Storming
+- po znalezieniu bounded contextów należy dla każdego z nich przeprowadzić analizę design i określić: komendy, widoki i resztę
 
 ##### ADR
 - https://medium.com/better-programming/here-is-a-simple-yet-powerful-tool-to-record-your-architectural-decisions-5fb31367a7da
@@ -43,11 +49,13 @@ Głównym
 ###### Architektura aplikacji
 - TODO
 
-##### Metryki
-- TODO
 
 #### CI/CD
 - https://dzone.com/articles/applying-cicd-to-java-apps-using-spring-boot
+
+
+#### Sample pet clinic
+- https://github.com/spring-petclinic/spring-petclinic-microservices
 
 
 
