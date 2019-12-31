@@ -49,13 +49,14 @@ Głównym
 ###### Architektura aplikacji
 - TODO
 
-
 #### CI/CD
 - https://dzone.com/articles/applying-cicd-to-java-apps-using-spring-boot
 
-
 #### Sample pet clinic
 - https://github.com/spring-petclinic/spring-petclinic-microservices
+
+#### Fake data generator
+- https://github.com/DiUS/java-faker
 
 
 
