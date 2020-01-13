@@ -19,7 +19,7 @@ Głównym
 - ELK: zbieranie logów - opcjonalne. wstępnie wyszukiwanie i full text search (jeżeli potrzebny) w mongodb
 - aplikacja FE napisana w Angularze
 - rozszerzalność aplikacji przy wykorzystaniu kubernetesa i obrazów w dokerze
-- rozważyć redis jako holder autentykacji - https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
+- rozważyć hazelcast jako holder autentykacji i distributed cache - https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
 - w celu weryfikacji działania rozszerzalności aplikacji należy napisać testy wydajnościowe i symulację ruchu w aplikacji
 
 
@@ -47,6 +47,9 @@ Głównym
 - TODO
 
 ###### Architektura aplikacji
+- TODO
+
+##### Behavioral tests in Spock
 - TODO
 
 #### CI/CD
