@@ -4,6 +4,8 @@
 Proposed
 
 #### 3. Context 
+Heroku
+AWS free tier
 
 #### 4. Decision 
 
