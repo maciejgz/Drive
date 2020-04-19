@@ -6,6 +6,7 @@ Proposed
 #### 3. Context 
 Heroku
 AWS free tier
+Google cloud platform free tier
 
 #### 4. Decision 
 

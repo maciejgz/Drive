@@ -8,7 +8,7 @@ There is a need to use one technology/framework as a main backend BE app for int
 Selected technology should be easily scalable using Docker and Kubernetes.
 
 #### 4. Decision 
-Use Spring Boot with Spring Cloud libraries to create microservice based BE app.
+Use Spring Boot with Spring Cloud libraries to create a microservice based BE app.
 
 #### 5. Consequences 
 - Sticked to Java based technologies and Spring

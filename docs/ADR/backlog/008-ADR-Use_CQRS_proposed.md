@@ -5,7 +5,7 @@ Proposed
 
 #### 3. Context 
 Aggregate pattern creates another level of data on the top of the simple CRUD. 
-CQRS differs query and commands data model to optimize apps (less joins, more user friendly model for )
+CQRS differs query and commands data model to optimize apps (less joins, more user-friendly model)
 
 #### 4. Decision 
 
