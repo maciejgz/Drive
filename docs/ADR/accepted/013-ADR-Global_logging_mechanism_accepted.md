@@ -1,4 +1,4 @@
-#### 1. How to organize genering logging mechanism
+#### 1. How to organize generic logging mechanism
 
 #### 2. Status 
 Accepted
