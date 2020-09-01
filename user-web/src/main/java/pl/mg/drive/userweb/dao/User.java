@@ -1,4 +1,4 @@
-package pl.mg.drive.userweb;
+package pl.mg.drive.userweb.dao;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

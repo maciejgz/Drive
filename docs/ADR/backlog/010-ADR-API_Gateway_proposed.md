@@ -5,7 +5,7 @@ Proposed
 
 #### 3. Context 
 Do zastanowienia czy komunikacja API Gateway z mikroserwisami powinna być synchroniczna czy nie.
-Czy API Gateway powinno przechowywać 
+Czy API Gateway powinno przechowywać sesję?
 
 #### 4. Decision 
 

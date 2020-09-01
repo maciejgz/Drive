@@ -1,4 +1,4 @@
-package pl.mg.drive.userweb;
+package pl.mg.drive.userweb.dao;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
