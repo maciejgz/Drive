@@ -7,6 +7,10 @@
 
     <modules>
         <module>user-web</module>
+        <module>bootiful-k8s</module>
+        <module>bootiful-lock</module>
+        <module>bootiful-tracing-service-a</module>
+        <module>bootiful-tracing-service-b</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
