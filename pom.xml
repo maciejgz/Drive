@@ -11,6 +11,8 @@
         <module>bootiful-lock</module>
         <module>bootiful-tracing-service-a</module>
         <module>bootiful-tracing-service-b</module>
+        <module>bootiful-messaging-consumer</module>
+        <module>bootiful-messaging-producer</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
