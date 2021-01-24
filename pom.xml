@@ -15,6 +15,7 @@
         <module>bootiful-messaging-producer</module>
         <module>bootiful-centralized-configuration-client</module>
         <module>bootiful-centralized-configuration-server</module>
+        <module>prometheus-metrics</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
