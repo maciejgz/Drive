@@ -16,6 +16,7 @@
         <module>bootiful-centralized-configuration-client</module>
         <module>bootiful-centralized-configuration-server</module>
         <module>prometheus-metrics</module>
+        <module>redis-cache</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
