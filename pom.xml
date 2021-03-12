@@ -17,6 +17,7 @@
         <module>bootiful-centralized-configuration-server</module>
         <module>prometheus-metrics</module>
         <module>redis-cache</module>
+        <module>session-sharing</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>

@@ -19,7 +19,7 @@ public class SessionControllerTest {
     private Jedis jedis;
     private static TestRestTemplate testRestTemplate;
     private static TestRestTemplate testRestTemplateWithAuth;
-    private String testUrl = "http://localhost:8080/";
+    private String testUrl = "http://localhost:8081/";
 
     @BeforeClass
     public static void initRestTemplate() {
@@ -29,7 +29,7 @@ public class SessionControllerTest {
 
     @Before
     public void clearRedisData() {
-        jedis = new Jedis("192.168.99.102", 6379);
+        jedis = new Jedis("localhost", 6379);
         jedis.flushDB();
     }
 
