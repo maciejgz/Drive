@@ -4,14 +4,14 @@ package pl.mg.drive.sessionsharing.testdoubles;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class QueueTests {
@@ -44,10 +44,25 @@ public class QueueTests {
         store.add(event1);
         store.add(event2);
 
-        queue.processAll();
+        when(event1.getText()).thenReturn("bbb");
+        System.out.println(event1.getText());
 
+        queue.processAll();
+        verify(event1).getText();
         verify(event1).process();
         verify(event2).process();
+    }
+
+    @Test
+    public void spyEventBehaviour() {
+        PublishedArticleEvent event = new PublishedArticleEvent(getDummyArticle());
+        PublishedArticleEvent eventSpy = Mockito.spy(event);
+        assertEquals("sss", eventSpy.getText());
+        verify(eventSpy).getText();
+    }
+
+    private static Article getDummyArticle() {
+        return new Article();
     }
 
 

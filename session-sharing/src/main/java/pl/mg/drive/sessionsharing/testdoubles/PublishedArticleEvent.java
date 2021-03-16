@@ -12,4 +12,9 @@ public class PublishedArticleEvent implements Event {
     public void process() {
         article.published();
     }
+
+    @Override
+    public String getText() {
+        return "sss";
+    }
 }
