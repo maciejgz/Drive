@@ -1,4 +1,4 @@
-#### 1. Versioning and autoupdate of the DB model - 
+#### 1. Versioning and autoupdate of the DB model - Liquibase
 
 #### 2. Status 
 Accepted
