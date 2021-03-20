@@ -5,17 +5,17 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
 	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-
     <changeSet id="1" author="mgzik">
-        <createTable tableName="department">
-            <column name="id" type="int">
+        <createTable tableName="drive_customer">
+            <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="name" type="varchar(50)">
+            <column name="name" type="varchar(200)">
                 <constraints nullable="false"/>
             </column>
-            <column name="active" type="boolean"
-                    defaultValueBoolean="true"/>
+            <column name="service_rendered" type="varchar(200)"/>
+            <column name="address" type="varchar(100)">
+            </column>
         </createTable>
     </changeSet>
 </databaseChangeLog>

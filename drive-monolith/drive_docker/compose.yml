@@ -15,6 +15,25 @@ services:
     networks:
       - drive-network
 
+  drive_keycloack:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: drive_keycloack
+    environment:
+      DB_VENDOR: mariadb
+      DB_ADDR: drive_maria_db
+      DB_DATABASE: drive
+      DB_USER: drive
+      DB_PASSWORD: qaz123
+      KEYCLOAK_USER: root
+      KEYCLOAK_PASSWORD: qaz123
+      JGROUPS_DISCOVERY_PROTOCOL: JDBC_PING
+    ports:
+      - 8080:8080
+    depends_on:
+      - drive_maria_db
+    networks:
+      - drive-network
+
   drive_mongo_db:
     image: mongo:4.4.4
     restart: always
@@ -42,8 +61,6 @@ services:
       - drive_mongo_db
     networks:
       - drive-network
-    links:
-      - drive_mongo_db
 
 networks:
   drive-network:
