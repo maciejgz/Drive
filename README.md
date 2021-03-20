@@ -5,11 +5,11 @@ Głównym
 
 #### Założenia biznesowe
 - Użytkownicy mogą wypożyczać sprzęt pozostawiony w mieście.
-- Obsługiwane rodzaje sprzętu: rower, hulajnoga, samochód, skuter. 
+- Obsługiwane rodzaje sprzętu: rower, hulajnoga, samochód, skuter. Lista rozszerzalna.
 - Użytkownicy mogą rejestrować i udostępniać własny sprzęt. W momencie rejestracji, użytkownik określa jaki jest koszt 
   wypożyczenia sprzętu. Dla ułatwienia per minuta.
-- Po rejestracji użytkownik musi zamontować nadajnik GPS otrzymany (zamówienie pominięte) od Admina po pewnym czasie 
-  i dopiero po tej akcji, sprzęt jest dostępny do wypożyczenia (od razu).
+- Po rejestracji użytkownik musi zamontować nadajnik GPS otrzymany (zamówienie pominięte) od Administratora 
+  po pewnym czasie i dopiero po tej akcji, sprzęt jest dostępny do wypożyczenia (od razu).
 - Zarejestrowany użytkownik może zarówno samemu wypożyczyć czyjś sprzęt jak i wypożyczać swój sprzęt.
 - Dostawca systemu zarabia na prowizji pobieranej od wypożyczającego sprzęt.
 - Użytkownik może wycofać sprzęt w dowolnym momencie, jeśli sprzęt nie jest wypożyczony. Usunięcie nadajnika pominięte.
@@ -23,9 +23,10 @@ Głównym
 - Baza danych: mongodb. Każdy z mikroserwisów posiada własną bazę danych.
 - ELK: zbieranie logów - opcjonalne. wstępnie wyszukiwanie i full text search (jeżeli potrzebny) w mongodb
 - aplikacja FE napisana w Angularze
-- rozszerzalność aplikacji przy wykorzystaniu kubernetesa i obrazów w dokerze
+- rozszerzalność aplikacji przy wykorzystaniu: docker, kubernetes.
 - rozważyć hazelcast jako holder autentykacji i distributed cache - https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
 - w celu weryfikacji działania rozszerzalności aplikacji należy napisać testy wydajnościowe i symulację ruchu w aplikacji
+- opcjonalnie Keycloack jako źródło autoryzacji.
 
 #### Planowanie architektury
 ##### Diagram C4 systemu
