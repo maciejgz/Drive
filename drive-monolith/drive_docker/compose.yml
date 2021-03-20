@@ -1,0 +1,49 @@
+version: '3.1'
+
+services:
+  drive_maria_db:
+    image: mariadb
+    restart: 'always'
+    container_name: drive_maria_db
+    environment:
+      MYSQL_ROOT_PASSWORD: qaz123
+      MYSQL_DATABASE: drive
+      MYSQL_USER: drive
+      MYSQL_PASSWORD: qaz123
+    ports:
+      - 3306:3306
+    networks:
+      - drive-network
+
+  drive_mongo_db:
+    image: mongo:4.4.4
+    restart: always
+    container_name: drive_mongo_db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: qaz123
+    ports:
+      - 27017:27017
+    networks:
+      - drive-network
+
+  drive_mongo_express:
+    image: mongo-express:0.54.0
+    restart: always
+    container_name: drive_mongo_express
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: qaz123
+      ME_CONFIG_MONGODB_SERVER: drive_mongo_db
+      ME_CONIFG_MONGODB_PORT: 27017
+    depends_on:
+      - drive_mongo_db
+    networks:
+      - drive-network
+    links:
+      - drive_mongo_db
+
+networks:
+  drive-network:

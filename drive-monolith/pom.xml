@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>drive-monolith</name>
-    <description>Monolith based version of the Drive app</description>
+    <description>Monolith version of the Drive app</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -34,7 +34,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
