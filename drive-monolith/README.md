@@ -10,3 +10,8 @@ For docker toolbox use IP assigned to the machine. for standard docker use local
 #### Profiles
 - local-docker-toolbox - local configuration with legacy docker instance on windows 10 home
 - local-docker - local configuration with a standard docker instance
+
+#### Database
+##### mariadb
+CREATE DATABASE drive;
+GRANT ALL ON drive.* TO 'drive'@'*';
