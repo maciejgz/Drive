@@ -44,4 +44,10 @@ After the setup, access page: /auth/admin in keycloak to manage system using cre
   
 
 ### Code structure
-Code structure is prepared for the DDD but still in the monolith app.
+Code structure is prepared for the DDD subdomains but still in the monolith app. Packages:
+- user - user account info and management
+- vehicle - vehicle management by the user
+- search - searching for the vehicles
+- rent - renting vehicle 
+- gps - GPS devices management
+- billing - user billing management
