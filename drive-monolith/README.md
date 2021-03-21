@@ -33,6 +33,7 @@ After the setup, access page: /auth/admin in keycloack to manage system using cr
   --data-urlencode 'password=qaz123' \
   --data-urlencode 'grant_type=password'
 - integrate with spring boot base on https://www.baeldung.com/spring-boot-keycloak using thymeleaf
+  - during keycloack config setup correct redirect URI with * mask like `http://localhost:8100/*`
   - required tables already defined in the liquibase
   - start app
   - access a main page: http://localhost:8100/

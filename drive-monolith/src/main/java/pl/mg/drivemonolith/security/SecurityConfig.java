@@ -22,14 +22,14 @@ import org.springframework.security.web.authentication.session.SessionAuthentica
 class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     // Submits the KeycloakAuthenticationProvider to the AuthenticationManager
     @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+    public void configureGlobal(AuthenticationManagerBuilder auth) {
         KeycloakAuthenticationProvider keycloakAuthenticationProvider = keycloakAuthenticationProvider();
         keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
         auth.authenticationProvider(keycloakAuthenticationProvider);
     }
 
     @Bean
-    public KeycloakSpringBootConfigResolver KeycloakConfigResolver() {
+    public KeycloakSpringBootConfigResolver keycloakConfigResolver() {
         return new KeycloakSpringBootConfigResolver();
     }
 
@@ -46,6 +46,8 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/customers*", "/users*")
                 .hasRole("user")
+                .antMatchers("/admin*")
+                .authenticated()
                 .anyRequest()
                 .permitAll();
     }

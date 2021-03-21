@@ -4,6 +4,7 @@ import org.keycloak.KeycloakPrincipal;
 import org.keycloak.KeycloakSecurityContext;
 import org.keycloak.adapters.springsecurity.token.KeycloakAuthenticationToken;
 import org.keycloak.representations.IDToken;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,7 @@ import java.util.Map;
 public class CustomUserAttrController {
 
     @GetMapping(path = "/users")
+    @PreAuthorize(value = "hasAnyRole('user')")
     public String getUserInfo(Model model) {
 
         KeycloakAuthenticationToken authentication = (KeycloakAuthenticationToken) SecurityContextHolder.getContext()
