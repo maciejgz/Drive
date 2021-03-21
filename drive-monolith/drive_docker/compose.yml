@@ -5,6 +5,8 @@ services:
     image: mariadb
     restart: 'always'
     container_name: drive_maria_db
+    volumes:
+      - /docker/volumes/drive/mariadb:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: qaz123
       MYSQL_DATABASE: drive
@@ -38,6 +40,8 @@ services:
     image: mongo:4.4.4
     restart: always
     container_name: drive_mongo_db
+    volumes:
+      - /docker/volumes/drive/mongodb:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: qaz123

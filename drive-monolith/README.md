@@ -34,7 +34,10 @@ After the setup, access page: /auth/admin in keycloack to manage system using cr
   --data-urlencode 'grant_type=password'
 - integrate with spring boot base on https://www.baeldung.com/spring-boot-keycloak using thymeleaf
   - during keycloack config setup correct redirect URI with * mask like `http://localhost:8100/*`
+  - create roles `user` and `admin` and assign them to `user1` and `admin1`
+  - create SSO client `drive`  
   - required tables already defined in the liquibase
   - start app
   - access a main page: http://localhost:8100/
   - after clicking customers link, redirect to the keycloack and go back with tokens and secured page (users will be added automatically).
+  - whole KeyCloack config can be imported from json - file is stored locally, not on the repo.
