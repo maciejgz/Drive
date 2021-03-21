@@ -17,9 +17,9 @@ services:
     networks:
       - drive-network
 
-  drive_keycloack:
+  drive_keycloak:
     image: quay.io/keycloak/keycloak:latest
-    container_name: drive_keycloack
+    container_name: drive_keycloak
     environment:
       DB_VENDOR: mariadb
       DB_ADDR: drive_maria_db

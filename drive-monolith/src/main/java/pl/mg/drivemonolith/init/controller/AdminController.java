@@ -1,4 +1,4 @@
-package pl.mg.drivemonolith.controller;
+package pl.mg.drivemonolith.init.controller;
 
 import org.keycloak.adapters.springsecurity.token.KeycloakAuthenticationToken;
 import org.springframework.security.access.prepost.PreAuthorize;

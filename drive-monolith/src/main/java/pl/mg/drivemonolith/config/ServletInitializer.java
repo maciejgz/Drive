@@ -1,4 +1,4 @@
-package pl.mg.drivemonolith;
+package pl.mg.drivemonolith.config;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

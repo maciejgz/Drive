@@ -26,7 +26,7 @@ Głównym
 - rozszerzalność aplikacji przy wykorzystaniu: docker, kubernetes.
 - rozważyć hazelcast jako holder autentykacji i distributed cache - https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
 - w celu weryfikacji działania rozszerzalności aplikacji należy napisać testy wydajnościowe i symulację ruchu w aplikacji
-- opcjonalnie Keycloack jako źródło autoryzacji.
+- opcjonalnie Keycloak jako źródło autoryzacji.
 - trackowanie issues w githubie
 
 #### Planowanie architektury

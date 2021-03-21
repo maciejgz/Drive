@@ -1,4 +1,4 @@
-package pl.mg.drivemonolith.security;
+package pl.mg.drivemonolith.config.security;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.keycloak.adapters.springsecurity.KeycloakSecurityComponents;

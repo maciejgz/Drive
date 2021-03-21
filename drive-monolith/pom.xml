@@ -50,7 +50,7 @@
             <version>2.7.2</version>
         </dependency>
 
-        <!-- keycloack -->
+        <!-- keycloak -->
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-spring-boot-starter</artifactId>

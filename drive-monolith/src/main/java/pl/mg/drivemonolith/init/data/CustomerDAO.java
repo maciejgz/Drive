@@ -1,4 +1,4 @@
-package pl.mg.drivemonolith.data;
+package pl.mg.drivemonolith.init.data;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

@@ -4,7 +4,7 @@
 - mariadb on port 3306
 - mongodb port 27017
 - mongo_express port 8081
-- keycloack port 8080
+- keycloak port 8080
 
 For docker toolbox use IP assigned to the machine. for standard docker use localhost as a domain.
 
@@ -15,11 +15,11 @@ For docker toolbox use IP assigned to the machine. for standard docker use local
 #### Database
 Managed by liquibase. Each modification shall be added to /resources/liquibase/drive-changeLog.xml
 
-#### Keycloack
-Users are managed in keycloack hosted with docker.
-After the setup, access page: /auth/admin in keycloack to manage system using credentials from docker compose.yml</br>
+#### Keycloak
+Users are managed in keycloak hosted with docker.
+After the setup, access page: /auth/admin in keycloak to manage system using credentials from docker compose.yml</br>
 
-##### Setup keycloack
+##### Setup keycloak
 - http://host:port/auth/admin - admin dashboard
 - create the realm: drive
 - create client drive with standard values except:  Valid Redirect URIs=http://appHost:port/*
@@ -33,11 +33,15 @@ After the setup, access page: /auth/admin in keycloack to manage system using cr
   --data-urlencode 'password=qaz123' \
   --data-urlencode 'grant_type=password'
 - integrate with spring boot base on https://www.baeldung.com/spring-boot-keycloak using thymeleaf
-  - during keycloack config setup correct redirect URI with * mask like `http://localhost:8100/*`
+  - during keycloak config setup correct redirect URI with * mask like `http://localhost:8100/*`
   - create roles `user` and `admin` and assign them to `user1` and `admin1`
   - create SSO client `drive`  
   - required tables already defined in the liquibase
   - start app
   - access a main page: http://localhost:8100/
-  - after clicking customers link, redirect to the keycloack and go back with tokens and secured page (users will be added automatically).
-  - whole KeyCloack config can be imported from json - file is stored locally, not on the repo.
+  - after clicking customers link, redirect to the keycloak and go back with tokens and secured page (users will be added automatically).
+  - whole KeyCloak config can be imported from json - file is stored locally, not on the repo.
+  
+
+### Code structure
+Code structure is prepared for the DDD but still in the monolith app.
