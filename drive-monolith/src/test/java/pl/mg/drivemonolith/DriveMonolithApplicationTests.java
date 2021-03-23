@@ -1,4 +1,4 @@
-package pl.mg.drivemonolith.config;
+package pl.mg.drivemonolith;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
