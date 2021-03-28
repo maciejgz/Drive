@@ -1,4 +1,4 @@
-package pl.mg.drivemonolith.init.controller;
+package pl.mg.drivemonolith.init;
 
 import org.keycloak.KeycloakPrincipal;
 import org.keycloak.KeycloakSecurityContext;

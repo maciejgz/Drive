@@ -1,11 +1,11 @@
-package pl.mg.drivemonolith.init.controller;
+package pl.mg.drivemonolith.init;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import pl.mg.drivemonolith.init.data.Customer;
-import pl.mg.drivemonolith.init.data.CustomerDAO;
+import pl.mg.drivemonolith.init.Customer;
+import pl.mg.drivemonolith.init.CustomerDAO;
 
 import java.security.Principal;
 

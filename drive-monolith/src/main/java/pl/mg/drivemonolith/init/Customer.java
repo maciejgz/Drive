@@ -1,4 +1,4 @@
-package pl.mg.drivemonolith.init.data;
+package pl.mg.drivemonolith.init;
 
 import javax.persistence.*;
 
