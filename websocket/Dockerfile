@@ -5,6 +5,8 @@ RUN set -uex; \
     rm -rf /root/.npm;
 
 WORKDIR /app
+RUN npm install ws
+
 ADD package*.json ./
 RUN npm install
 ADD . .
