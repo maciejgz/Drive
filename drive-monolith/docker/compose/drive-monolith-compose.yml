@@ -7,6 +7,8 @@ services:
     image: mariadb:10.5.9
     restart: 'always'
     container_name: drive_maria_db
+    volumes:
+      - /volumes/drive/mariadb:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: qaz123
       MYSQL_DATABASE: drive
@@ -99,7 +101,6 @@ services:
       - "SPRING_PROFILES_ACTIVE=local-docker"
     networks:
       - drive-network
-
 
 networks:
   drive-network:

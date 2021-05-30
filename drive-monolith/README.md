@@ -9,6 +9,10 @@
 
 For docker toolbox use IP assigned to the machine. for standard docker use localhost as a domain.
 
+### Package build
+- spring boot plugin is used to create executable jar </br>
+`mvn clean compile package spring-boot:repackage -Dmaven.test.skip=true`
+
 #### Profiles
 - local-docker-toolbox - local configuration with legacy docker instance on windows 10 home
 - local-docker - local configuration with a standard docker instance
@@ -52,3 +56,4 @@ Code structure is prepared for the DDD subdomains but still in the monolith app.
 - rent - renting vehicle 
 - gps - GPS devices management
 - billing - user billing management
+- travel - domain of the travel
