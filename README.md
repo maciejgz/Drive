@@ -4,7 +4,7 @@ Portal do udostępniania i wypożyczania różnego typu pojazdów do poruszania 
 Głównym 
 
 #### Założenia biznesowe
-- Użytkownicy mogą wypożyczać sprzęt pozostawiony w mieście.
+- Użytkownicy mogą wypożyczać sprzęt w obrębie miasta.
 - Obsługiwane rodzaje sprzętu: rower, hulajnoga, samochód, skuter. Lista rozszerzalna.
 - Użytkownicy mogą rejestrować i udostępniać własny sprzęt. W momencie rejestracji, użytkownik określa jaki jest koszt 
   wypożyczenia sprzętu. Dla ułatwienia per minuta.

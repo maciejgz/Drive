@@ -1,0 +1,104 @@
+version: '3.1'
+## Drive monolith with docker toolbox
+services:
+  drive_maria_db:
+    image: mariadb:10.5.9
+    restart: 'always'
+    container_name: drive_maria_db
+    volumes:
+      - /volumes/drive/mariadb:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: qaz123
+      MYSQL_DATABASE: drive
+      MYSQL_USER: drive
+      MYSQL_PASSWORD: qaz123
+    ports:
+      - 3306:3306
+    networks:
+      - drive-network
+
+  drive_keycloak:
+    image: quay.io/keycloak/keycloak:13.0.0
+    container_name: drive_keycloak
+    environment:
+      DB_VENDOR: mariadb
+      DB_ADDR: drive_maria_db
+      DB_DATABASE: drive
+      DB_USER: drive
+      DB_PASSWORD: qaz123
+      KEYCLOAK_USER: root
+      KEYCLOAK_PASSWORD: qaz123
+      JGROUPS_DISCOVERY_PROTOCOL: JDBC_PING
+    ports:
+      - 8080:8080
+    depends_on:
+      - drive_maria_db
+    networks:
+      - drive-network
+
+  drive_mongo_db:
+    image: mongo:4.4.4
+    restart: always
+    container_name: drive_mongo_db
+    volumes:
+      - /volumes/drive/mongodb:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: qaz123
+    ports:
+      - 27017:27017
+    networks:
+      - drive-network
+
+  drive_mongo_express:
+    image: mongo-express:0.54.0
+    restart: always
+    container_name: drive_mongo_express
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: qaz123
+      ME_CONFIG_MONGODB_SERVER: drive_mongo_db
+      ME_CONIFG_MONGODB_PORT: 27017
+    depends_on:
+      - drive_mongo_db
+    networks:
+      - drive-network
+
+  drive_zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    ports:
+      - '2181:2181'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - drive-network
+
+  drive_kafka:
+    image: 'bitnami/kafka:latest'
+    ports:
+      - '9092:9092'
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
+      - KAFKA_ZOOKEEPER_CONNECT=drive_zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - drive_zookeeper
+    networks:
+      - drive-network
+
+  drive_app:
+    image: drive-monolith:latest
+    ports:
+      - 8100:8100
+    environment:
+      - "SPRING_PROFILES_ACTIVE=local-docker-toolbox"
+    networks:
+      - drive-network
+
+
+networks:
+  drive-network:

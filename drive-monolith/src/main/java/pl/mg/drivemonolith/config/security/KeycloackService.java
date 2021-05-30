@@ -10,7 +10,6 @@ import java.security.Principal;
 
 public class KeycloackService {
 
-
     public static String extractUsername(Authentication authentication) {
         KeycloakAuthenticationToken keycloakAuthenticationToken = (KeycloakAuthenticationToken) authentication;
         final Principal principal = (Principal) authentication.getPrincipal();

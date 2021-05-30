@@ -12,6 +12,6 @@ import java.util.UUID;
 public class GPSDevice {
 
     @NonNull
-    private final UUID gpsDeviceId;
+    private final UUID deviceId;
 
 }

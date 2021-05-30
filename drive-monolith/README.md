@@ -5,6 +5,7 @@
 - mongodb port 27017
 - mongo_express port 8081
 - keycloak port 8080
+- drive app port 8100
 
 For docker toolbox use IP assigned to the machine. for standard docker use localhost as a domain.
 

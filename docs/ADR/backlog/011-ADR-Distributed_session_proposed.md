@@ -4,7 +4,7 @@
 Proposed
 
 #### 3. Context 
-W jaki sposób przenosić sesję pomiędzy serwisami
+W jaki sposób przenosić sesję pomiędzy serwisami. Najlepiej chyba poprzez Redis.
 
 #### 4. Decision 
 
