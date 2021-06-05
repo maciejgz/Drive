@@ -14,6 +14,9 @@ public class Bicycle implements Vehicle {
     @NonNull
     private UUID id;
 
+    /**
+     * Cost of rental per minute.
+     */
     @NonNull
     private BigDecimal cost;
 

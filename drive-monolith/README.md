@@ -46,6 +46,7 @@ After the setup, access page: /auth/admin in keycloak to manage system using cre
   - access a main page: http://localhost:8100/
   - after clicking customers link, redirect to the keycloak and go back with tokens and secured page (users will be added automatically).
   - whole KeyCloak config can be imported from json - file is stored locally, not on the repo.
+  - user can login using URL like this: `http://192.168.99.102:8080/auth/realms/drive/protocol/openid-connect/auth?response_type=code&client_id=drive&scope=openid&redirect_uri=http://192.168.99.102:8100/`
   
 
 ### Code structure

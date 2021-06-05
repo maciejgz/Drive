@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.UUID;
 
 /**
- * Rent represents a process of vehicle rent. It can be unsuccessful. Only one travel can be assigned to a rent.
+ * Rent represents a process of vehicle rental. It can be unsuccessful. Only one journey can be assigned to a rent.
  */
 @Data
 public class Rent {
