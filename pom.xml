@@ -8,6 +8,7 @@
     <modules>
         <module>user-web</module>
         <module>drive-monolith</module>
+        <module>drive-aws-s3-lambda</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
