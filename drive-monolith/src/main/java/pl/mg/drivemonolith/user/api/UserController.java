@@ -40,7 +40,6 @@ public class UserController {
     @PreAuthorize(value = "hasRole('admin')")
     public ResponseEntity<User> register(Authentication authentication) {
         String username = KeycloackService.extractUsername(authentication);
-
         User user = new User(UUID.fromString(authentication.getName()), username);
         return ResponseEntity.ok(user);
     }

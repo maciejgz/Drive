@@ -1,7 +1,6 @@
 ## Drive
 ### Opis
 Portal do udostępniania i wypożyczania różnego typu pojazdów do poruszania się po mieście.
-Głównym 
 
 #### Założenia biznesowe
 - Użytkownicy mogą wypożyczać sprzęt w obrębie miasta.
@@ -15,7 +14,7 @@ Głównym
 - Użytkownik może wycofać sprzęt w dowolnym momencie, jeśli sprzęt nie jest wypożyczony. Usunięcie nadajnika pominięte.
 
 #### Założenia techniczne
-- **NIE SKUPIAC SIE NA SZCZEGOLACH FUNKCJONALNOSCI - CELEM JEST ANALIZA ARCHITEKTURY I TESTY ROZWIAZAN**
+- **NIE SKUPIAC SIE NA SZCZEGOLACH FUNKCJONALNOSCI - CELEM JEST ANALIZA ARCHITEKTURY MIKROSERWISOWEJ I TESTY ROZWIAZAN**
 - architektura projektowana przy wykorzystaniu: DDD, Event Storming, Bounded Context
 - aplikacja złożona z mikroserwisów z API Gateway - komunikacja pomiędzy mikroserwisami z wykorzystaniem Event Driver Architecture
 - aplikacja BE zbudowana w Spring Cloud z wykorzystaniem Kafka jako systemu messaggingu
@@ -26,7 +25,7 @@ Głównym
 - rozszerzalność aplikacji przy wykorzystaniu: docker, kubernetes.
 - rozważyć hazelcast jako holder autentykacji i distributed cache - https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
 - w celu weryfikacji działania rozszerzalności aplikacji należy napisać testy wydajnościowe i symulację ruchu w aplikacji
-- opcjonalnie Keycloak jako źródło autoryzacji.
+- opcjonalnie Keycloak jako źródło autoryzacji
 - trackowanie issues w githubie
 
 #### Planowanie architektury
@@ -48,6 +47,9 @@ Głównym
 ##### ADR
 - https://medium.com/better-programming/here-is-a-simple-yet-powerful-tool-to-record-your-architectural-decisions-5fb31367a7da
 - w katalogu /docs/ADR/
+
+#### use cases
+- TODO
 
 ###### Architektura systemowa
 - TODO
