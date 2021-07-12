@@ -16,7 +16,7 @@ Portal do udostępniania i wypożyczania różnego typu pojazdów do poruszania 
 #### Założenia techniczne
 - **NIE SKUPIAC SIE NA SZCZEGOLACH FUNKCJONALNOSCI - CELEM JEST ANALIZA ARCHITEKTURY MIKROSERWISOWEJ I TESTY ROZWIAZAN**
 - architektura projektowana przy wykorzystaniu: DDD, Event Storming, Bounded Context
-- aplikacja złożona z mikroserwisów z API Gateway - komunikacja pomiędzy mikroserwisami z wykorzystaniem Event Driver Architecture
+- aplikacja złożona z mikroserwisów z API Gateway na CQRS - komunikacja pomiędzy mikroserwisami z wykorzystaniem Event Driver Architecture na Kafce
 - aplikacja BE zbudowana w Spring Cloud z wykorzystaniem Kafka jako systemu messaggingu
 - API gateway zabezpieczone przez spring security z JWT oparte na rolach i strukturze danych usera ze spring security
 - Baza danych: mongodb. Każdy z mikroserwisów posiada własną bazę danych.
