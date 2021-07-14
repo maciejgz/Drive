@@ -10,7 +10,7 @@
 For docker toolbox use IP assigned to the machine. for standard docker use localhost as a domain.
 
 ### Package build
-- spring boot plugin is used to create executable jar </br>
+- spring boot plugin creates executable jar </br>
 `mvn clean compile package spring-boot:repackage -Dmaven.test.skip=true`
 
 #### Profiles
@@ -21,7 +21,7 @@ For docker toolbox use IP assigned to the machine. for standard docker use local
 Managed by liquibase. Each modification shall be added to /resources/liquibase/drive-changeLog.xml
 
 #### Keycloak
-Users are managed in keycloak hosted with docker.
+Keycloak hosted with docker manages users.
 After the setup, access page: /auth/admin in keycloak to manage system using credentials from docker compose.yml</br>
 
 ##### Setup keycloak
