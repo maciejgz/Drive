@@ -1,7 +1,7 @@
 #### 1. RSocket as a communication service between microservices 
 
 #### 2. Status 
-Proposed
+Rejected
 
 #### 3. Context 
 

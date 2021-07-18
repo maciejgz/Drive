@@ -1,6 +1,6 @@
 ## Functional requirements
 
-- Użytkownicy mogą wypożyczać pojazdy w obrębie miasta.
+1.  Użytkownicy mogą wypożyczać pojazdy w obrębie miasta.
 - Obsługiwane rodzaje pojazdów: rower, hulajnoga, samochód, skuter. Lista rozszerzalna.
 - Użytkownicy mogą rejestrować i udostępniać własny sprzęt. W momencie rejestracji, użytkownik określa jaki jest koszt
   wypożyczenia sprzętu per minuta.
@@ -22,4 +22,4 @@
 - Rozszerzalność aplikacji
 - Konteneryzacja
 - technologie chmurowe
-- CI/CD
+- CI/CD w gitlabie

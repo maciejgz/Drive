@@ -10,12 +10,13 @@
         <module>drive-monolith</module>
         <module>drive-aws-s3-lambda</module>
         <module>transactions-demo</module>
+        <module>kafka-stream</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
 
     <properties>
-        <spring.boot.version>2.3.3.RELEASE</spring.boot.version>
+        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
