@@ -1,6 +1,14 @@
 <databaseChangeLog logicalFilePath="db.changelog-1.0.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="2021.07.19.1" author="mgzik">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="user"/>
+        </preConditions>
+        <dropTable tableName="user"/>
+    </changeSet>
+
     <changeSet id="2021.07.05-1" author="mgzik">
         <preConditions onFail="MARK_RAN">
             <tableExists tableName="user"/>

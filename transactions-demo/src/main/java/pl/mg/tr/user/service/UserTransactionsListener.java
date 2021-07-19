@@ -10,7 +10,7 @@ import org.springframework.transaction.event.TransactionalEventListener;
 public class UserTransactionsListener {
 
     /**
-     * Catches user creation rollback
+     * Catches user creation rollback event
      * @param event
      */
     @TransactionalEventListener(phase = TransactionPhase.AFTER_ROLLBACK)

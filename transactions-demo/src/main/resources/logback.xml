@@ -41,4 +41,14 @@
         <appender-ref ref="RollingFile"/>
     </logger>
 
+    <logger name="org.springframework.transaction" level="debug" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="RollingFile"/>
+    </logger>
+
+    <logger name="org.springframework.orm.jpa" level="debug" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="RollingFile"/>
+    </logger>
+
 </configuration>
