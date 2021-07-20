@@ -38,7 +38,6 @@ public class UserService {
         return mapper.map(userRepository.save(mapper.map(user, User.class)), UserDto.class);
     }
 
-
     /**
      * Support async method creating transaction and stopping for some time
      */
@@ -87,7 +86,8 @@ public class UserService {
     }
 
     /**
-     * If a current transaction exists, first Spring suspends it, and then the business logic is executed without a transaction.
+     * If a current transaction exists, first Spring suspends it, and then the business logic is executed without a
+     * transaction.
      */
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public void propagationNotSupported() {
@@ -102,7 +102,7 @@ public class UserService {
         userRepository.save(new User(new Random().nextLong(), "nested", "bbb"));
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.SERIALIZABLE)
     @Async
     public void longRunningTransaction() {
         User user = userRepository.getOne(123L);
@@ -117,7 +117,7 @@ public class UserService {
         userRepository.save(user);
     }
 
-    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.SERIALIZABLE)
+    @Transactional(propagation = Propagation.REQUIRED)
     @Async
     public void shortTransaction() {
         try {
