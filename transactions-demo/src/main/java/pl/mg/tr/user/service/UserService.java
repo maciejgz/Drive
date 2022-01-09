@@ -102,12 +102,11 @@ public class UserService {
         userRepository.save(new User(new Random().nextLong(), "nested", "bbb"));
     }
 
-    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.SERIALIZABLE)
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
     @Async
-    public void longRunningTransaction() {
+    public synchronized void longRunningTransaction() {
         User user = userRepository.getOne(123L);
         user.setUsername("long_run_process_before");
-        userRepository.save(user);
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
@@ -117,9 +116,9 @@ public class UserService {
         userRepository.save(user);
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
     @Async
-    public void shortTransaction() {
+    public synchronized void shortTransaction() {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

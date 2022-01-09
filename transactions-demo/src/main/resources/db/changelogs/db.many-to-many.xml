@@ -1,0 +1,67 @@
+<databaseChangeLog logicalFilePath="db.changelog-1.0.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="m2m-company" author="mgzik">
+        <createTable tableName="company">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="m2m-person" author="mgzik">
+        <createTable tableName="person">
+            <column name="username" type="varchar2(50)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="m2m-employee" author="mgzik">
+        <createTable tableName="employee">
+            <column name="company_id" type="BIGINT">
+            </column>
+            <column name="person_id" type="varchar2(50)">
+            </column>
+            <column name="position" type="varchar2(50)"></column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="m2m-employee-key" id="addPrimaryKey-example">
+        <addPrimaryKey
+                columnNames="company_id, person_id"
+                constraintName="pk_employee"
+                tableName="employee"/>
+    </changeSet>
+
+    <changeSet id="m2m-employee-company-fk" author="mgzik">
+        <addForeignKeyConstraint baseTableName="employee" baseColumnNames="company_id" constraintName="company-fk"
+                                 referencedTableName="company"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="m2m-employee-person-fk" author="mgzik">
+        <addForeignKeyConstraint baseTableName="employee" baseColumnNames="person_id" constraintName="person-fk"
+                                 referencedTableName="person"
+                                 referencedColumnNames="username"/>
+    </changeSet>
+
+    <changeSet id="m2m-add-company" author="mgzik">
+        <insert tableName="company">
+            <column name="id" value="1"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="m2m-add-person" author="mgzik">
+        <insert tableName="person">
+            <column name="username" value="user1"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="m2m-add-employee" author="mgzik">
+        <sql>INSERT INTO employee (company_id, person_id, position)
+             VALUES (1, "user1", "position");</sql>
+    </changeSet>
+</databaseChangeLog>
