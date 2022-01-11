@@ -19,8 +19,8 @@ public class EmployeeId implements Serializable {
     @Column(name = "company_id")
     private Integer companyId;
 
-    @Column(name = "person_id")
-    private String personId;
+    @Column(name = "person_username")
+    private String personUsername;
 
 
 

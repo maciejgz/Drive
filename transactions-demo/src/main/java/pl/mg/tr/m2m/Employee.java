@@ -19,7 +19,7 @@ public class Employee {
     private Company company;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @MapsId("personId")
+    @MapsId("personUsername")
     private Person person;
 
     @Column(name = "position")

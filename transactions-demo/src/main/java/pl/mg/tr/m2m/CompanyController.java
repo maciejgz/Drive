@@ -25,6 +25,7 @@ public class CompanyController {
     public ResponseEntity<Void> getCompany() throws UserException, UsernameException {
         try {
             List<Company> all = companyRepository.findAll();
+            System.out.println(all.size());
             for (Company company : all) {
                 company.getEmployees().forEach(employee -> System.out.println(employee.toString()));
             }

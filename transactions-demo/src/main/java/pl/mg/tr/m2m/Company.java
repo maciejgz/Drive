@@ -1,6 +1,7 @@
 package pl.mg.tr.m2m;
 
 import lombok.Data;
+import lombok.ToString.Exclude;
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,8 +18,10 @@ public class Company {
     @OneToMany(
             mappedBy = "company",
             cascade = CascadeType.ALL,
-            orphanRemoval = true
+            orphanRemoval = true,
+            fetch = FetchType.EAGER
     )
+    @Exclude
     private List<Employee> employees;
 
     public void addEmployee(Person person) {

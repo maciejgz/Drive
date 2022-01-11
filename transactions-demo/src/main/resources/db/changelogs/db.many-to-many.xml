@@ -23,7 +23,7 @@
         <createTable tableName="employee">
             <column name="company_id" type="BIGINT">
             </column>
-            <column name="person_id" type="varchar2(50)">
+            <column name="person_username" type="varchar2(50)">
             </column>
             <column name="position" type="varchar2(50)"></column>
         </createTable>
@@ -31,7 +31,7 @@
 
     <changeSet author="m2m-employee-key" id="addPrimaryKey-example">
         <addPrimaryKey
-                columnNames="company_id, person_id"
+                columnNames="company_id, person_username"
                 constraintName="pk_employee"
                 tableName="employee"/>
     </changeSet>
@@ -43,7 +43,7 @@
     </changeSet>
 
     <changeSet id="m2m-employee-person-fk" author="mgzik">
-        <addForeignKeyConstraint baseTableName="employee" baseColumnNames="person_id" constraintName="person-fk"
+        <addForeignKeyConstraint baseTableName="employee" baseColumnNames="person_username" constraintName="person-fk"
                                  referencedTableName="person"
                                  referencedColumnNames="username"/>
     </changeSet>
@@ -61,7 +61,7 @@
     </changeSet>
 
     <changeSet id="m2m-add-employee" author="mgzik">
-        <sql>INSERT INTO employee (company_id, person_id, position)
+        <sql>INSERT INTO employee (company_id, person_username, position)
              VALUES (1, "user1", "position");</sql>
     </changeSet>
 </databaseChangeLog>
