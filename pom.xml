@@ -8,9 +8,8 @@
     <modules>
         <module>user-web</module>
         <module>drive-monolith</module>
-        <module>drive-aws-s3-lambda</module>
-        <module>transactions-demo</module>
-        <module>kafka-stream</module>
+
+        <module>drive-tests</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
