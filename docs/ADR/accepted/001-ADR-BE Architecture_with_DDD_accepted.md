@@ -1,4 +1,4 @@
-#### 1. Microservices on DDD, CQRS with differed DBs for write and read
+#### 1. Microservices on DDD, CQRS with differed DBs for write and read (not in each case)
 
 #### 2. Status 
 Proposed
