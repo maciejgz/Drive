@@ -1,3 +1,5 @@
+# Requirements
+
 ## Functional requirements
 
 - Użytkownicy mogą wypożyczać pojazdy w obrębie miasta.
@@ -20,3 +22,33 @@
 - Konteneryzacja
 - technologie chmurowe
 - CI/CD w gitlabie
+
+
+# Stakeholders
+
+List of stakeholders in the project:
+- company owner
+- developers
+- vehicle owner
+- borrower
+<p>
+
+[drawIO file](./stakeholders.drawio)
+<br />
+
+![](stakeholders.jpg)
+
+# Business goals
+
+<p>Opisywne w postaci: {stakeholder} needs to {business goal} because {reason/context}</p>
+
+| Stakeholder   |                     Goal                     |                                                                                                            Context |
+|---------------|:--------------------------------------------:|-------------------------------------------------------------------------------------------------------------------:|
+| Company owner |          Get income from the system          |                System powinien być używany przez jak największą liczbę userów, aby zmaksymalizować przychód. <br/> |
+| Developers    | zbudowanie szybkiego i przystępnego systemu  |           Odpowiednio działający system zbudowany zgodnie z założeniami clean code ułatwi jego rozwój i utrzymanie |
+| Vehicle owner |       Możliwość udostępnienia sprzętu        | Z punktu widzenia właściciela pojazdu najważniejsza jest bezpieczeństwo sprzętu i wiedza na temat jego lokalizacji |
+| Borrower      | łatwo dostępny system i szybkie wypożyczanie |                                                                Szybkość wypożyczenia i dokładność naliczania opłat |
+
+
+
+
