@@ -6,11 +6,11 @@ Portal do udostępniania i wypożyczania różnego typu pojazdów do poruszania 
 
 #### Requirements
 
-[Requirements](docs/architecture/1_requirements/requirements.md)
+[Requirements](docs/architecture/1_requirements/Requirements.md)
 
 #### Architectural concept
 
-[Architectural concept](docs/architecture/5_architectural_concept/architectural_concept.md)
+[Architectural concept](docs/architecture/6_architectural_concept/architectural_concept.md)
 
 #### Planowanie architektury
 

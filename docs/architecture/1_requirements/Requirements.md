@@ -1,4 +1,4 @@
-# Requirements
+# 1. Requirements
 
 ## Functional requirements
 
@@ -24,7 +24,7 @@
 - CI/CD w gitlabie
 
 
-# Stakeholders
+# 2. Stakeholders
 
 List of stakeholders in the project:
 - company owner
@@ -38,7 +38,7 @@ List of stakeholders in the project:
 
 ![](stakeholders.jpg)
 
-# Business goals
+# 3. Stakeholders business goals
 
 <p>Opisywne w postaci: {stakeholder} needs to {business goal} because {reason/context}</p>
 
@@ -48,6 +48,9 @@ List of stakeholders in the project:
 | Developers    | zbudowanie szybkiego i przystępnego systemu  |           Odpowiednio działający system zbudowany zgodnie z założeniami clean code ułatwi jego rozwój i utrzymanie |
 | Vehicle owner |       Możliwość udostępnienia sprzętu        | Z punktu widzenia właściciela pojazdu najważniejsza jest bezpieczeństwo sprzętu i wiedza na temat jego lokalizacji |
 | Borrower      | łatwo dostępny system i szybkie wypożyczanie |                                                                Szybkość wypożyczenia i dokładność naliczania opłat |
+
+
+# 4 Contraints
 
 
 
