@@ -1,7 +1,7 @@
 # 1. Requirements
 
 ## Functional requirements
-
+ TODO opisać je w formie user stories oraz ASR workbooka i wybrać kluczowe dla architektury wymagania (ASR - Architectural significant requirements)
 - Użytkownicy mogą wypożyczać pojazdy w obrębie miasta.
 - Obsługiwane rodzaje pojazdów: rower, hulajnoga, samochód, skuter. Lista rozszerzalna.
 - Użytkownicy mogą rejestrować i udostępniać własny sprzęt. W momencie rejestracji, użytkownik określa jaki jest koszt
@@ -15,7 +15,7 @@
 - Chargowanie usera po zakończonym wypożyczeniu - +/- na konto usera. Jeśli user posiada swoje pojazdy, na jego konto
   dodawane są pieniądze otrzymane z wypożyczeń tych pojazdów.
   
-## Non-functional requirements
+## Non-functional requirements (Quality attributes, constraints)
 
 - Wszystkie dane o trasie, wypożyczeniach i innych powinny być zapisywane w formie logów (Kafka) do późniejszej analizy
 - Rozszerzalność aplikacji
@@ -50,8 +50,15 @@ List of stakeholders in the project:
 | Borrower      | łatwo dostępny system i szybkie wypożyczanie |                                                                Szybkość wypożyczenia i dokładność naliczania opłat |
 
 
-# 4 Contraints
+# 4 Constraints
 
+Ograniczenia nałożone przez wymagania, aktorów tworzących system lub prawo
 
+| Constraint                | Origin |      Type | Context |
+|---------------------------|:------:|----------:|--------:|
+| Microservice architecture |  Dev   | Technical ||
 
+# 5 Quality requirements
+
+TODO
 
