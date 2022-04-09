@@ -1,4 +1,4 @@
-#### 1. Distributed session storage framework
+#### 1. Distributed session storage or JWT
 
 #### 2. Status 
 Proposed
@@ -7,6 +7,5 @@ Proposed
 W jaki sposób przenosić sesję pomiędzy serwisami. Najlepiej chyba poprzez Redis.
 
 #### 4. Decision 
-
 
 #### 5. Consequences 

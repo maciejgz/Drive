@@ -1,4 +1,4 @@
-#### 1. Select Authentication/Authorization mechanism for distributed environment
+#### 1. Choose Authentication/Authorization mechanism for distributed environment
 
 #### 2. Status 
 Proposed
