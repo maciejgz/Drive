@@ -2,17 +2,17 @@
 
 ## Architectural assumptions
 
-- **NIE SKUPIAC SIE NA SZCZEGOLACH FUNKCJONALNOSCI - CELEM JEST ANALIZA ARCHITEKTURY MIKROSERWISOWEJ I TESTY ROZWIAZAN**
-- architektura projektowana przy wykorzystaniu: DDD, Event Storming, Bounded Context
+- **NIE SKUPIAC SIE NA SZCZEGOLACH FUNKCJONALNOSCI - CELEM JEST ANALIZA ARCHITEKTURY MIKROSERWISOWEJ, CHMUR I TESTY ROZWIAZAN**
+- architektura projektowana przy wykorzystaniu: DDD, CQRS, Event Storming (opcjonalnie), Bounded Context
 - aplikacja złożona z mikroserwisów z API Gateway na CQRS - komunikacja pomiędzy mikroserwisami z wykorzystaniem Event
   Driver Architecture (nie w pełni) na Kafce
 - aplikacja BE zbudowana w Spring Cloud z wykorzystaniem Kafka jako systemu messaggingu
 - API gateway zabezpieczone przez spring security z JWT oparte na rolach i strukturze danych usera ze spring security i Keycloack
-- Baza danych: mongodb. Każdy z mikroserwisów posiada własną bazę danych. Początkowo bez oddzielnej bazy read.
-- ELK: zbieranie logów - opcjonalne. wstępnie wyszukiwanie i full text search (jeżeli potrzebny) w mongodb
+- Baza danych: mongodb. Każdy z mikroserwisów posiada własną bazę danych.
+- ELK: zbieranie logów - opcjonalne. wstępnie wyszukiwanie geo w mongodb bez open text search
 - aplikacja FE napisana w Angularze
 - rozszerzalność aplikacji przy wykorzystaniu: docker, kubernetes
-- rozważyć hazelcast jako holder autentykacji i distributed cache
+- rozważyć hazelcast/redis jako holder autentykacji i distributed cache. Opcjonalnie wykorzystanie tokenów
   - https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
 - w celu weryfikacji działania rozszerzalności aplikacji należy napisać testy wydajnościowe i symulację ruchu w
   aplikacji

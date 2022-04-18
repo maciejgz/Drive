@@ -4,6 +4,6 @@ Functional requirements come directly from the user perspective, define the syst
 into use cases. Non-functional requirements come from the technical part of the project and describe properties of the
 system.
 
-TODO:
+Architectural requirements:
 Use C4 model to describe architecture
 Component responsibility collaborator cards - activity 13
