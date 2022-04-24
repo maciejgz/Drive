@@ -13,7 +13,7 @@
     <name>drive-monolith</name>
     <description>Monolith version of the Drive app</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>18</java.version>
     </properties>
     <dependencies>
         <!-- spring boot -->

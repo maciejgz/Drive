@@ -8,13 +8,13 @@
         <version>0.1.0</version>
     </parent>
     <groupId>pl.mg.drive</groupId>
-    <artifactId>user-web</artifactId>
+    <artifactId>drive-user-service</artifactId>
     <packaging>war</packaging>
-    <name>user-web</name>
-    <description>web side user</description>
+    <name>drive-user-service</name>
+    <description>Drive user service</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>18</java.version>
     </properties>
 
     <dependencies>
@@ -76,7 +76,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.3.1.RELEASE</version>
+                <version>2.6.3</version>
                 <executions>
                     <execution>
                         <goals>

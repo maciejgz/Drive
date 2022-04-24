@@ -6,7 +6,7 @@
     <version>0.1.0</version>
 
     <modules>
-        <module>user-web</module>
+        <module>drive-user-service</module>
         <module>drive-monolith</module>
 
         <module>drive-tests</module>
@@ -16,7 +16,7 @@
 
     <properties>
         <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
-        <java.version>11</java.version>
+        <java.version>18</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>

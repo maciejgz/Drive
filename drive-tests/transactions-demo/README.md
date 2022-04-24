@@ -1,1 +1,1 @@
-Sample app for spring transactions analysis.
+Sample app for spring transactions' analysis.

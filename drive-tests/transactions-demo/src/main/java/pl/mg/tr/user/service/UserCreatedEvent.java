@@ -1,6 +1,5 @@
 package pl.mg.tr.user.service;
 
-import lombok.Data;
 import org.springframework.context.ApplicationEvent;
 
 public class UserCreatedEvent extends ApplicationEvent {

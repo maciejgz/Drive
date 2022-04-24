@@ -62,7 +62,7 @@ public class UserService {
     }
 
     /**
-     * Uses existing transaction if exists. If there is not transaction - run without
+     * Uses existing transaction if exists. If there is not a transaction - run without
      */
     @Transactional(propagation = Propagation.SUPPORTS)
     public void propagationSupported() {

@@ -103,7 +103,7 @@ public class UserController {
         //create user
         UserDto userDto = new UserDto(123L, "long_running", "pass");
         userService.addUser(userDto);
-        //get user and start editing with long running transaction in async
+        //get user and start editing with a long-running transaction in async
         userService.longRunningTransaction();
         //open another, short transaction and close in async
         userService.shortTransaction();
