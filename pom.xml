@@ -8,8 +8,10 @@
     <modules>
         <module>drive-user-service</module>
         <module>drive-monolith</module>
-
         <module>drive-tests</module>
+        <module>drive-gateway</module>
+        <module>drive-discovery</module>
+        <module>drive-journey</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
