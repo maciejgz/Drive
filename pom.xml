@@ -12,6 +12,7 @@
         <module>drive-gateway</module>
         <module>drive-discovery</module>
         <module>drive-journey</module>
+        <module>drive-config</module>
     </modules>
     <packaging>pom</packaging>
     <name>drive</name>
