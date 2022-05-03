@@ -10,10 +10,13 @@
 | Simulation | 8099      |
 
 ### External modules (docker)
-|Module| Ports |
-|------|-------|
-|Sonar| 9100  |
-|Zipkin server| 9411  |
-|Kafka| 29092 |
-|Prometheus| 9090  |
-|Grafana| 9091  |
+| Module        | Ports |
+|---------------|-------|
+| Sonar         | 9100  |
+| Zipkin server | 9411  |
+| Kafka         | 29092 |
+| Prometheus    | 9090  |
+| Grafana       | 9091  |
+| Keycloack     | 8081  |
+| MariaDB       | 3306  |
+

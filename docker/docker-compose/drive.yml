@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  drive-maria-db:
+    image: mariadb:10.7
+    container_name: drive-maria-db
+    volumes:
+      - '/var/lib/docker/volumes/drive/mariadb_keycloak:/var/lib/mysql'
+    environment:
+      MYSQL_ROOT_PASSWORD: qaz123
+      MYSQL_DATABASE: drive
+      MYSQL_USER: drive
+      MYSQL_PASSWORD: qaz123
+    ## command: mysqld --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--silent", "-u", "root", "-pqaz123"]
+    ports:
+      - "3306:3306"
+    networks:
+      - drive-network
+
+  drive-keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: drive_keycloak
+    volumes:
+      - '/var/lib/docker/volumes/drive/keycloak:/var/lib/keycloak/data'
+    environment:
+      DB_VENDOR: mariadb
+      DB_ADDR: drive-maria-db
+      DB_DATABASE: drive
+      DB_USER: drive
+      DB_PASSWORD: qaz123
+      KEYCLOAK_USER: root
+      KEYCLOAK_PASSWORD: qaz123
+      JGROUPS_DISCOVERY_PROTOCOL: JDBC_PING
+      ## works on port 8081
+    command: ["-Djboss.socket.binding.port-offset=1"]
+    ports:
+      - "8081:8081"
+    depends_on:
+      - drive-maria-db
+    networks:
+      - drive-network
+
+networks:
+  drive-network:
