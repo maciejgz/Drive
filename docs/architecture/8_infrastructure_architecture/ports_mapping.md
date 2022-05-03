@@ -4,7 +4,7 @@
 |------------|-----------|
 | Config     | 8888      |
 | Gateway    | 8080      |
-| Discovery  | 8088      |
+| Discovery  | 8761      |
 | User       | 8100-8199 |
 | Journey    | 8200-8299 |
 | Simulation | 8099      |
