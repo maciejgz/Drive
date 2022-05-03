@@ -1,0 +1,37 @@
+server:
+  port: '8080'
+
+spring:
+  application:
+    name: drive-gateway
+  security:
+    oauth2:
+      client:
+        provider:
+          drive-keycloak-provider:
+            issuer-uri: 'http://localhost:8081/auth/realms/drive-realm'
+        registration:
+          drive-gateway-client:
+            client-id: drive-gateway-client
+            provider: drive-keycloak-provider
+            client-secret: V30OcMagdSJvXHipyJWgE2wW0FLvOwWm
+            authorization-grant-type: authorization_code
+            redirect-uri: '{baseUrl}/login/oauth2/code/keycloak'
+  cloud:
+    gateway:
+      default-filters: TokenRelay
+      routes:
+        - id: drive-journey
+          uri: 'http://localhost:8200'
+          predicates:
+            - Path=/journey/**
+          filters:
+            - RemoveRequestHeader=Cookie
+
+eureka:
+  client:
+    service-url:
+      defaultZone: 'http://localhost:8761/eureka'
+  instance:
+    preferIpAddress: true
+

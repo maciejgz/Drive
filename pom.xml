@@ -6,7 +6,7 @@
     <version>0.1.0</version>
 
     <modules>
-        <module>drive-user-service</module>
+        <module>drive-user</module>
         <!--<module>drive-monolith</module>-->
         <!--<module>drive-tests</module>-->
         <module>drive-gateway</module>
