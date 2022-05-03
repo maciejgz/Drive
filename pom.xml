@@ -7,7 +7,7 @@
 
     <modules>
         <module>drive-user-service</module>
-        <module>drive-monolith</module>
+        <!--<module>drive-monolith</module>-->
         <module>drive-tests</module>
         <module>drive-gateway</module>
         <module>drive-discovery</module>
